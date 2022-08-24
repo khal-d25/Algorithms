@@ -133,6 +133,8 @@ const BubbleSort = (props)=>{
     return(
         <div id="bubbleSortContainer">
             <Array data={props.data}/>
+            <div id="step" className="ui field">Bubble Sort tries to push the largest element the end of the array in each step</div>
+
             <button id="sortBtn" className="ui button" onClick={sortArray}>Sort</button>
             <button id="nextStep" className="ui button">Next</button>
             
