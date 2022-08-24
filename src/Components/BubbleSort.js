@@ -69,6 +69,9 @@ const BubbleSort = (props)=>{
                         element.children[0].style.backgroundColor = 'green'
                         elOne.push(element)
                     }
+
+                    document.getElementById('step').innerText = `Comparing ${currentArray[one]} & ${currentArray[two]}`
+
                 });
                 
                 await pauser();
@@ -87,6 +90,7 @@ const BubbleSort = (props)=>{
                     elOne[0].children[0].style.backgroundColor = 'orange';
                     elOne[1].children[0].style.backgroundColor = 'orange';
                     // document.getElementById(two.toString()).style.order = one.toString();
+                    document.getElementById('step').innerText = `As ${currentArray[one]} is greater than ${currentArray[two]}. We swap!`
                     
                     let valOne = currentArray[one];
                     let valtwo = currentArray[two];
