@@ -1,19 +1,27 @@
 import React from "react";
-import './app.css'
-
 
 const Array = (props)=>{
 
-    if(props.data !== undefined){
-        const array = props.data.map((item,index)=>{
-            return <div className="block" key={index}>{item}</div>
-        })
-    
-        return(
-            <div className="eachArray">{array}</div>
-        )
-    }
-    
+    let arr = props.data;
+
+    const sarr = arr.map((item,index)=>{
+
+        
+        
+        return (
+            <div style={{order:index}} id={index} key={index} className="column eblock block">
+                <div className="ui fluid card imageItem">
+                    <div className="image images"><span>{item}</span></div>
+                </div>
+            </div>
+                )
+    })
+
+    return(
+        <div id='arraySorting' className="ui grid">
+            {sarr}
+        </div>
+    )
 }
 
 export default Array;
