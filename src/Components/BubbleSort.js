@@ -23,13 +23,19 @@ const BubbleSort = (props)=>{
         
             })
 
+            document.getElementById('nextStep').addEventListener('click',()=>{
+                go();
+            })
+
+
+
         })
     }
 
     const sortArray = async()=>{
 
         document.getElementById('sortBtn').style.display = 'none';
-        alert('scroll down for step wise sorting')
+        // alert('scroll down for step wise sorting')
         let currentArray = []
         
         let list = document.querySelectorAll('.block')
@@ -109,6 +115,8 @@ const BubbleSort = (props)=>{
         
     }
 
+    
+
     // const sortArray = async ()=>{
     //     for(let i = 0;i<10;i++){
     //         stat =1;
@@ -122,6 +130,8 @@ const BubbleSort = (props)=>{
         <div id="bubbleSortContainer">
             <Array data={props.data}/>
             <button id="sortBtn" className="ui button" onClick={sortArray}>Sort</button>
+            <button id="nextStep" className="ui button">Next</button>
+            
         </div>
         ) 
         
